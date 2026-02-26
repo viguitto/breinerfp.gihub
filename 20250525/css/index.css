@@ -1,0 +1,14 @@
+* { box-sizing: border-box; margin: 0;
+    padding: 0;}
+
+body {
+    display: grid;
+}
+
+@media screen and (max-width:800px) {
+    body { display: flex ;}
+}
+
+@media screen and (max-width:450px) {
+    body { display: block ;}
+}
