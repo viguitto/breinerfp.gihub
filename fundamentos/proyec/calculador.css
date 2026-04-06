@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #305655;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.calculator {
+  width: 100%;
+  max-width: 350px;
+  background-color: #000000;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(97, 0, 187, 0.5);
+}
+
+.display {
+  height: 150px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px;
+  font-size: 4rem;
+  font-weight: 300;
+  color: #f0f0f0;
+  background-color: #1c1919;
+  overflow: hidden;
+  text-align: right;
+  transition: all 0.3s ease;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.btn {
+  width: 100%;
+  height: 70px;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: #3b3636;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.btn:hover {
+  transform: scale(0.95);
+  box-shadow: inset 0 0 0 2px rgba(126, 36, 36, 0.3);
+}
+
+
+.ac {
+  background-color: #0a376a;
+  color: white;
+}
+
+.op {
+  background-color: #436994;
+  color: white;
+}
+
+.del {
+  background-color: #720707;
+  color: #ccc;
+}
+
+.eq {
+  background-color: #35bb62;
+  color: white;
+}
+
+.btn.num:hover {
+  background-color: #711313;
+  color: #d0d0d0;
+}
+
+.btn.op:hover,
+.btn.ac:hover,
+.btn.del:hover {
+  background-color: #54a66b;
+  color: #32346d;
+}
+
+.btn.eq:hover {
+  background-color: #43767c;
+  color: rgb(189, 0, 0);
+}
+
+.display:hover {
+  background-color: #232323;
+}
+
+@media (max-width: 350px) {
+  .display {
+    font-size: 3rem;
+  }
+  .btn {
+    height: 60px;
+    font-size: 1.3rem;
+  }
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  padding: 30px 0;
+  width: 100%;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  position: fixed;
+  top: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: #79bb7e;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: #38585b;
+  background-color: rgba(0, 140, 255, 0.1);
+  padding: 5px 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 255, 153, 0.3);
+  transition: all 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+

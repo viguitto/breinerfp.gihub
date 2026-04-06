@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto</title>
+  <link rel="stylesheet" href="contacto.css" />
+</head>
+<body>
+  <div class="container">
+    <form id="contact-form">
+      <h1>Contáctanos</h1>
+      <p>¿Tienes alguna pregunta o necesitas ayuda? Escríbenos y responderemos lo antes posible.</p>
+
+      <label for="nombre">Nombre *</label>
+      <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo" />
+
+      <label for="correo">Correo Electrónico *</label>
+      <input type="email" id="correo" name="correo" required placeholder="tu@email.com" />
+
+      <label for="fecha">Fecha *</label>
+      <input type="date" id="fecha" name="fecha" required />
+
+      <label for="lugar">Lugar *</label>
+      <input type="text" id="lugar" name="lugar" required placeholder="Ciudad, estado o país" />
+
+      <label for="carreras">Carreras Estudiadas *</label>
+      <input type="text" id="carreras" name="carreras" required placeholder="Ej: Ingeniería, Medicina, etc." />
+
+      <label for="mensaje">Mensaje *</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+
+      <label for="captcha">Código de seguridad *</label>
+      <div class="captcha-wrapper">
+        <span id="captcha-text">ZnP</span>
+        <input type="text" id="captcha" name="captcha" required placeholder="Escribe el código" />
+      </div>
+
+      <button type="submit" class="btn-submit">Enviar Mensaje</button>
+    </form>
+  </div>
+</body>
+</html>
